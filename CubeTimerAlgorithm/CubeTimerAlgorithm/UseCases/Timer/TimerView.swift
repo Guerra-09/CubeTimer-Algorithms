@@ -14,7 +14,7 @@ struct TimerView: View {
 
     // Visual components
     @State var info: Bool = false
-    @State var scramble: String = "R' L F R U R2 R' R2 L'2F R'\n                 B R F' L"
+    @State var scrambleSet: String = ""
     
     // Timer variables
     @State var recording: Bool = false
@@ -22,24 +22,27 @@ struct TimerView: View {
     @State var timeColor: Color = .black
     @State var time: String = "0:00"
     
-    // Develop
-    @State var log: String = "log"
+    
     
     var body: some View {
         
-        // Esta parte del codigo controla los Gesture que funcionan sobre el temporizador
+        // Esta parte del codigo controla los Gesture que funcionan sobre el temporizador, Si se mantiene apretado por 0.5 segundos se vuelve verde y al soltarlo pasados los 0.5, el tiempo empieza a correr
         let longPressDrag = LongPressGesture(minimumDuration: 0.5)
             .onEnded { _ in
-               
+                
                 timeColor = .green
                 recording = true
-                log = "recording"
             }
             .sequenced(before: DragGesture(minimumDistance: 0))
             .onEnded { _ in
                 
+                if timeViewModel.mode == .stopped {
+                    timeViewModel.startTimer()
+                } else {
+                    timeViewModel.stopTimer()
+                }
+                
                 recording = false
-                log = "soltado"
             }
         
         
@@ -47,8 +50,9 @@ struct TimerView: View {
             
             VStack {
                 // Un scramble para mixear el cubo
-                Text(scramble)
+                Text(scrambleSet)
                     .font(.system(size: 30))
+                    .multilineTextAlignment(.center)
                 
                 HStack(spacing: 25) {
                     
@@ -58,45 +62,43 @@ struct TimerView: View {
                     
 
                     Button {
-                        
+                        scrambleSet = timeViewModel.getAlgorithm()
                     } label: { RefreshScramble() }
                     
                     
 
                 }
-                Text("\(log)")
-                    .foregroundColor(.red)
+                
+            }
+            .onAppear {
+                scrambleSet = timeViewModel.getAlgorithm()
             }
             .sheet(isPresented: $info) {
                 InfoView()
             }
             
-                        
             
             Text("\(String(format: "%.2f", timeViewModel.time))")
+                // Este tapGesture permite que cambie el color del timer, si se apreta rapidamente y esta en 0.00 se pone en rojo por 1 segundo, y si el tiempo esta corriendo lo para
                 .onTapGesture {
                     
-                    if timeViewModel.mode == .stopped {
-                        timeViewModel.startTimer()
-                    } else {
+                    if timeViewModel.mode == .recording {
                         timeViewModel.stopTimer()
                     }
                     
-                    
-                    
-                    log = "tapped"
                     timeColor = .red
                     tapped = true
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         tapped = false
                         timeColor = .black
+                        
                     }
                 
                 }
                 .gesture(longPressDrag)
-                .font(.system(size: 100))
-                .padding(.bottom, 240)
+                .font(.system(size: 120))
+                .padding(.bottom, 200)
                 .foregroundColor(timeColor)
                 
             
