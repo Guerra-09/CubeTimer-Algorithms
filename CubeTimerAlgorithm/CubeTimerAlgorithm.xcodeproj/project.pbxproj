@@ -18,7 +18,19 @@
 		660E90ED2974B82300D4F8B7 /* RefreshScramble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E90EC2974B82300D4F8B7 /* RefreshScramble.swift */; };
 		660E90EF2974B96100D4F8B7 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E90EE2974B96100D4F8B7 /* HelpView.swift */; };
 		660E90F12974BB2300D4F8B7 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E90F02974BB2300D4F8B7 /* InfoView.swift */; };
+		660E90FF2975D6C700D4F8B7 /* ScrambleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E90FE2975D6C700D4F8B7 /* ScrambleTest.swift */; };
+		660E91052975D6F500D4F8B7 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E90DE2974A97700D4F8B7 /* TimerViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		660E91002975D6C700D4F8B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 660E90BD2974A76800D4F8B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 660E90C42974A76800D4F8B7;
+			remoteInfo = CubeTimerAlgorithm;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		660E90C52974A76800D4F8B7 /* CubeTimerAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeTimerAlgorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,10 +45,19 @@
 		660E90EC2974B82300D4F8B7 /* RefreshScramble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshScramble.swift; sourceTree = "<group>"; };
 		660E90EE2974B96100D4F8B7 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		660E90F02974BB2300D4F8B7 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		660E90FC2975D6C700D4F8B7 /* ScrambleTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrambleTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		660E90FE2975D6C700D4F8B7 /* ScrambleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		660E90C22974A76800D4F8B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		660E90F92975D6C700D4F8B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				660E90C72974A76800D4F8B7 /* CubeTimerAlgorithm */,
+				660E90FD2975D6C700D4F8B7 /* ScrambleTest */,
 				660E90C62974A76800D4F8B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				660E90C52974A76800D4F8B7 /* CubeTimerAlgorithm.app */,
+				660E90FC2975D6C700D4F8B7 /* ScrambleTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +116,7 @@
 		660E90D72974A80400D4F8B7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				660E90F72975D2F700D4F8B7 /* Extensions */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -103,6 +127,7 @@
 				660E90E52974A9F900D4F8B7 /* Menu */,
 				660E90E02974A98800D4F8B7 /* Algorithms */,
 				660E90DB2974A94900D4F8B7 /* Timer */,
+				660E91062975DD4800D4F8B7 /* Settings */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -144,6 +169,28 @@
 			path = TimerComponents;
 			sourceTree = "<group>";
 		};
+		660E90F72975D2F700D4F8B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		660E90FD2975D6C700D4F8B7 /* ScrambleTest */ = {
+			isa = PBXGroup;
+			children = (
+				660E90FE2975D6C700D4F8B7 /* ScrambleTest.swift */,
+			);
+			path = ScrambleTest;
+			sourceTree = "<group>";
+		};
+		660E91062975DD4800D4F8B7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,6 +211,24 @@
 			productReference = 660E90C52974A76800D4F8B7 /* CubeTimerAlgorithm.app */;
 			productType = "com.apple.product-type.application";
 		};
+		660E90FB2975D6C700D4F8B7 /* ScrambleTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 660E91022975D6C700D4F8B7 /* Build configuration list for PBXNativeTarget "ScrambleTest" */;
+			buildPhases = (
+				660E90F82975D6C700D4F8B7 /* Sources */,
+				660E90F92975D6C700D4F8B7 /* Frameworks */,
+				660E90FA2975D6C700D4F8B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				660E91012975D6C700D4F8B7 /* PBXTargetDependency */,
+			);
+			name = ScrambleTest;
+			productName = ScrambleTest;
+			productReference = 660E90FC2975D6C700D4F8B7 /* ScrambleTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,6 +241,10 @@
 				TargetAttributes = {
 					660E90C42974A76800D4F8B7 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					660E90FB2975D6C700D4F8B7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 660E90C42974A76800D4F8B7;
 					};
 				};
 			};
@@ -194,6 +263,7 @@
 			projectRoot = "";
 			targets = (
 				660E90C42974A76800D4F8B7 /* CubeTimerAlgorithm */,
+				660E90FB2975D6C700D4F8B7 /* ScrambleTest */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +275,13 @@
 			files = (
 				660E90D02974A76A00D4F8B7 /* Preview Assets.xcassets in Resources */,
 				660E90CD2974A76A00D4F8B7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		660E90FA2975D6C700D4F8B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +304,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		660E90F82975D6C700D4F8B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660E91052975D6F500D4F8B7 /* TimerViewModel.swift in Sources */,
+				660E90FF2975D6C700D4F8B7 /* ScrambleTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		660E91012975D6C700D4F8B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 660E90C42974A76800D4F8B7 /* CubeTimerAlgorithm */;
+			targetProxy = 660E91002975D6C700D4F8B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		660E90D12974A76A00D4F8B7 /* Debug */ = {
@@ -412,6 +506,44 @@
 			};
 			name = Release;
 		};
+		660E91032975D6C700D4F8B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HKKAM4GN94;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Warlo.ScrambleTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CubeTimerAlgorithm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CubeTimerAlgorithm";
+			};
+			name = Debug;
+		};
+		660E91042975D6C700D4F8B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HKKAM4GN94;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Warlo.ScrambleTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CubeTimerAlgorithm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CubeTimerAlgorithm";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,6 +561,15 @@
 			buildConfigurations = (
 				660E90D42974A76A00D4F8B7 /* Debug */,
 				660E90D52974A76A00D4F8B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		660E91022975D6C700D4F8B7 /* Build configuration list for PBXNativeTarget "ScrambleTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				660E91032975D6C700D4F8B7 /* Debug */,
+				660E91042975D6C700D4F8B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
