@@ -1,0 +1,50 @@
+{    
+    "OLL" :[
+
+        {
+            "cubeRender" : "010111010101000000101",
+            "solution" : "R U2 R’ U’ R U R’ U’ R U’ R’"
+
+        }, {
+            "cubeRender" : "010111010001100010001",
+            "solution" : "R U2 R2 U’ R2 U’ R2 U2 R"
+            
+        }, {
+            "cubeRender" : "010111011001100000100",
+            "solution" : "L’ U R U’ L U R’"
+
+        }, {
+            "cubeRender" : "010111110100010000001",
+            "solution" : "R U’ L’ U R’ U’ L"
+
+        }, {
+            "cubeRender" : "010111111101000000000",
+            "solution" : "R2 D’ R U2 R’ D R U2 R"
+
+        }, {
+            "cubeRender" : "0111111011100000000100",
+            "solution" : "r U R’ U’ r’ F R F’"
+
+        }, {
+            "cubeRender" : "110111011001000010000",
+            "solution" : "R’ F’ L’ F R F’ L F"
+
+        }],  
+
+    "PLL" :[
+
+        {
+            "cubeRender" : "010111111101000000000",
+            "solution" : "R2 D’ R U2 R’ D R U2 R"
+
+        }, {
+            "cubeRender" : "0111111011100000000100",
+            "solution" : "r U R’ U’ r’ F R F’"
+
+        }, {
+            "cubeRender" : "110111011001000010000",
+            "solution" : "R’ F’ L’ F R F’ L F"
+
+        }
+    ]
+}
