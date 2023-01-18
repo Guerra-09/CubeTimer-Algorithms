@@ -20,6 +20,12 @@
 		660E90F12974BB2300D4F8B7 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E90F02974BB2300D4F8B7 /* InfoView.swift */; };
 		660E90FF2975D6C700D4F8B7 /* ScrambleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E90FE2975D6C700D4F8B7 /* ScrambleTest.swift */; };
 		660E91052975D6F500D4F8B7 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E90DE2974A97700D4F8B7 /* TimerViewModel.swift */; };
+		660E91092975EE6F00D4F8B7 /* AlgorithmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E91082975EE6F00D4F8B7 /* AlgorithmButton.swift */; };
+		66FD1BE32976EE110000AB03 /* OLLAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD1BE22976EE110000AB03 /* OLLAlgorithms.swift */; };
+		66FD1BE62976F7510000AB03 /* CubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD1BE52976F7510000AB03 /* CubeView.swift */; };
+		66FD1BE82976F75A0000AB03 /* CubeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD1BE72976F75A0000AB03 /* CubeViewModel.swift */; };
+		66FD1BEA2976F8050000AB03 /* SquareComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD1BE92976F8050000AB03 /* SquareComponent.swift */; };
+		66FD1BEC2976F9630000AB03 /* CubeAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD1BEB2976F9630000AB03 /* CubeAlgorithm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,13 @@
 		660E90F02974BB2300D4F8B7 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		660E90FC2975D6C700D4F8B7 /* ScrambleTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrambleTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		660E90FE2975D6C700D4F8B7 /* ScrambleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleTest.swift; sourceTree = "<group>"; };
+		660E91082975EE6F00D4F8B7 /* AlgorithmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmButton.swift; sourceTree = "<group>"; };
+		66FD1BE22976EE110000AB03 /* OLLAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLLAlgorithms.swift; sourceTree = "<group>"; };
+		66FD1BE52976F7510000AB03 /* CubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeView.swift; sourceTree = "<group>"; };
+		66FD1BE72976F75A0000AB03 /* CubeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeViewModel.swift; sourceTree = "<group>"; };
+		66FD1BE92976F8050000AB03 /* SquareComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareComponent.swift; sourceTree = "<group>"; };
+		66FD1BEB2976F9630000AB03 /* CubeAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeAlgorithm.swift; sourceTree = "<group>"; };
+		66FD1BED29771FB90000AB03 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +122,7 @@
 		660E90D62974A7FF00D4F8B7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				66FD1BEB2976F9630000AB03 /* CubeAlgorithm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +130,7 @@
 		660E90D72974A80400D4F8B7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				66FD1BE42976F7360000AB03 /* CubeRenderer */,
 				660E90F72975D2F700D4F8B7 /* Extensions */,
 			);
 			path = Util;
@@ -147,6 +162,7 @@
 			children = (
 				660E90E12974A99C00D4F8B7 /* AlgorithmsViewModel.swift */,
 				660E90E32974A9AB00D4F8B7 /* AlgorithmsView.swift */,
+				660E91072975EDCC00D4F8B7 /* AlgorithmComponents */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -172,6 +188,7 @@
 		660E90F72975D2F700D4F8B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				66FD1BED29771FB90000AB03 /* MyPlayground.playground */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +206,25 @@
 			children = (
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		660E91072975EDCC00D4F8B7 /* AlgorithmComponents */ = {
+			isa = PBXGroup;
+			children = (
+				660E91082975EE6F00D4F8B7 /* AlgorithmButton.swift */,
+				66FD1BE22976EE110000AB03 /* OLLAlgorithms.swift */,
+			);
+			path = AlgorithmComponents;
+			sourceTree = "<group>";
+		};
+		66FD1BE42976F7360000AB03 /* CubeRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				66FD1BE52976F7510000AB03 /* CubeView.swift */,
+				66FD1BE72976F75A0000AB03 /* CubeViewModel.swift */,
+				66FD1BE92976F8050000AB03 /* SquareComponent.swift */,
+			);
+			path = CubeRenderer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,15 +328,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66FD1BE32976EE110000AB03 /* OLLAlgorithms.swift in Sources */,
 				660E90E42974A9AB00D4F8B7 /* AlgorithmsView.swift in Sources */,
 				660E90E72974AA0600D4F8B7 /* MenuView.swift in Sources */,
 				660E90DD2974A95700D4F8B7 /* TimerView.swift in Sources */,
 				660E90ED2974B82300D4F8B7 /* RefreshScramble.swift in Sources */,
 				660E90DF2974A97700D4F8B7 /* TimerViewModel.swift in Sources */,
+				660E91092975EE6F00D4F8B7 /* AlgorithmButton.swift in Sources */,
 				660E90EF2974B96100D4F8B7 /* HelpView.swift in Sources */,
+				66FD1BEA2976F8050000AB03 /* SquareComponent.swift in Sources */,
 				660E90E22974A99C00D4F8B7 /* AlgorithmsViewModel.swift in Sources */,
+				66FD1BEC2976F9630000AB03 /* CubeAlgorithm.swift in Sources */,
 				660E90F12974BB2300D4F8B7 /* InfoView.swift in Sources */,
+				66FD1BE82976F75A0000AB03 /* CubeViewModel.swift in Sources */,
 				660E90C92974A76800D4F8B7 /* CubeTimerAlgorithmApp.swift in Sources */,
+				66FD1BE62976F7510000AB03 /* CubeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
