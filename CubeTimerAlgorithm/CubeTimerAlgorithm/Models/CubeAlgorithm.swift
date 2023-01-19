@@ -15,3 +15,21 @@ struct Cube: Identifiable {
     let rowThree: [String]
 
 }
+
+struct ResponseData: Decodable {
+    let oll: [CubeData]
+    
+}
+
+struct CubeData: Decodable, Hashable {
+    
+    let id: Int
+    let render: String
+    let solution: String
+    
+    enum CodingKeys: String, CodingKey {
+        case render = "cubeRender"
+        case solution
+        case id
+    }
+}

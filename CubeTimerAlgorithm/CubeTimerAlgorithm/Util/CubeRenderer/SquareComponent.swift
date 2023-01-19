@@ -15,7 +15,7 @@ struct EdgeComponent: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing: 1) {
             
             // Up
             if side == 1 {
@@ -24,7 +24,7 @@ struct EdgeComponent: View {
             
             // Right
             } else if side == 2 {
-                HStack {
+                HStack(spacing: 1) {
                     SingleSquare(show: isYellow)
                     SingleSquareLine(vertical: true, show: upEdge)
                 }
@@ -36,7 +36,7 @@ struct EdgeComponent: View {
             
             // Left
             } else if side == 4 {
-                HStack {
+                HStack(spacing: 1) {
                     SingleSquareLine(vertical: true, show: upEdge)
                     SingleSquare(show: isYellow)
                 }
@@ -47,8 +47,6 @@ struct EdgeComponent: View {
     }
 }
 
-
-
 struct CornerComponent: View {
     
     @State var side: Int
@@ -58,11 +56,12 @@ struct CornerComponent: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing: 1) {
             // Arriba a la izquierda
             if side == 1 {
                 SingleSquareLine(vertical: false, show: firstCorner)
-                HStack {
+                    .padding(.leading, 12)
+                HStack(spacing: 1) {
                     SingleSquareLine(vertical: true, show: secondCorner)
                     SingleSquare(show: isYellow)
                 }
@@ -71,7 +70,8 @@ struct CornerComponent: View {
             } else if side == 2 {
                 
                 SingleSquareLine(vertical: false, show: firstCorner)
-                HStack {
+                    .padding(.trailing, 12)
+                HStack(spacing: 1) {
                     SingleSquare(show: isYellow)
                     SingleSquareLine(vertical: true, show: secondCorner)
                 }
@@ -79,19 +79,21 @@ struct CornerComponent: View {
             // Abajo a la izquierda
             } else if side == 3 {
                 
-                HStack {
+                HStack(spacing: 1) {
                     SingleSquareLine(vertical: true, show: firstCorner)
                     SingleSquare(show: isYellow)
                 }
                 SingleSquareLine(vertical: false, show: secondCorner)
+                    .padding(.leading, 8)
             
                 // Abajo a la derecha
             } else {
-                HStack {
+                HStack(spacing: 1) {
                     SingleSquare(show: isYellow)
                     SingleSquareLine(vertical: true, show: firstCorner)
                 }
                 SingleSquareLine(vertical: false, show: secondCorner)
+                    .padding(.trailing, 8)
             }
             
             
@@ -111,10 +113,10 @@ struct SingleSquare: View {
     
     var body: some View {
         Rectangle()
-            .frame(maxWidth: 70, maxHeight: 70)
+            .frame(maxWidth: UIConstants.widthCube, maxHeight: UIConstants.heigthCube)
             .foregroundColor(show ? .yellow : .gray)
-            .border(Color.black, width: 2)
-            .cornerRadius(8)
+            .border(Color.black, width: 1)
+            .cornerRadius(5)
     }
 }
 
@@ -127,17 +129,17 @@ struct SingleSquareLine: View {
         
         if !vertical {
             Rectangle()
-                .frame(maxWidth: 70, maxHeight: 15)
+                .frame(maxWidth: UIConstants.squareLineWidht, maxHeight: UIConstants.squareLineHeight)
                 .foregroundColor(show ? .yellow : .gray)
-                .border(Color.black, width: 2)
-                .cornerRadius(8)
+                .border(Color.black, width: 1)
+                .cornerRadius(5)
             
         } else {
             Rectangle()
-                .frame(maxWidth: 15, maxHeight: 70)
+                .frame(maxWidth: UIConstants.squareLineHeight, maxHeight: UIConstants.squareLineWidht)
                 .foregroundColor(show ? .yellow : .gray)
-                .border(Color.black, width: 2)
-                .cornerRadius(8)
+                .border(Color.black, width: 1)
+                .cornerRadius(5)
         }
         
         
@@ -148,8 +150,9 @@ struct SingleSquareLine: View {
 struct SquareComponent_Previews: PreviewProvider {
     static var previews: some View {
         
-//        CornerComponent(side: 1, isYellow: true, firstCorner: false, secondCorner: false)
-        EdgeComponent(side: 1, isYellow: true, upEdge: false)
+       CornerComponent(side: 4, isYellow: true, firstCorner: false, secondCorner: false)
+        //SingleSquare(show: true)
+        //SingleSquareLine(vertical: true, show: true)
         
     }
 }

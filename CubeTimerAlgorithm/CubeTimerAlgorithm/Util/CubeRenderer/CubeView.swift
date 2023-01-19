@@ -13,9 +13,10 @@ import SwiftUI
 
 struct CubeView: View {
     
-    @ObservedObject var cubeViewModel = CubeViewModel() //                    8 new ->
-    @State var patron: [String] = ["0", "1", "0", "1", "1", "1", "0", "1", "0", "1", "0", "1", "0", "0", "0", "0", "0", "0", "1", "0", "1"]
-    @State var solution: String = "R U2 R’ U’ R U R’ U’ R U’ R’"
+    //                8 new ->
+    @State var patron: [String] = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+    @State var solution: String
+    
     var body: some View {
         
         
@@ -23,7 +24,7 @@ struct CubeView: View {
             
  
             
-            Grid {
+            Grid(horizontalSpacing: 1, verticalSpacing: 1) {
                 GridRow {
                     
                     CornerComponent(side: 1, isYellow: readCorners(pieceNumber: 1), firstCorner: readUpPiece(pieceNumber: 1), secondCorner: readUpPiece(pieceNumber: 4))
@@ -42,7 +43,7 @@ struct CubeView: View {
                 }
                 
                 GridRow {
-                    CornerComponent(side: 3, isYellow: readCorners(pieceNumber: 3), firstCorner: readUpPiece(pieceNumber: 7), secondCorner: readUpPiece(pieceNumber: 10))
+                    CornerComponent(side: 3, isYellow: readCorners(pieceNumber: 3), firstCorner: readUpPiece(pieceNumber: 8), secondCorner: readUpPiece(pieceNumber: 10))
                     
                     EdgeComponent(side: 3, isYellow: readEdges(pieceNumber: 4), upEdge: readUpPiece(pieceNumber: 11))
                     
@@ -53,18 +54,23 @@ struct CubeView: View {
             }
             
             Text(solution)
-                .font(.system(size: 30))
+                .font(.system(size: 20))
                 .multilineTextAlignment(.center)
                 .bold()
             
             
             .onAppear {
-                //patron = cubeViewModel.testPatron
+                renderize()
             }
 
 
         }
+        
      }
+    
+    func renderize() -> Void {
+        
+    }
     
     //   9   10   11    12   13  14   15   16   17    18  19   20
     // ["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
@@ -205,6 +211,6 @@ struct CubeView: View {
 
 struct CubeView_Previews: PreviewProvider {
     static var previews: some View {
-        CubeView()
+        CubeView(patron: ["1"], solution: "nil")
     }
 }

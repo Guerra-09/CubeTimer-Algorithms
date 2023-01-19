@@ -1,68 +1,57 @@
-//import UIKit
+//import Foundation
 //
-//struct Cube {
-//
-//    let id = UUID().uuidString
-//    let rowOne: [String]
-//    let rowTwo: [String]
-//    let rowThree: [String]
-//
-//    let rowTop: [String]
-//    let rowRight: [String]
-//    let rowLeft: [String]
-//    let rowBottom: [String]
+//struct ResponseData: Decodable {
+//    let oll: [CubeData]
+//    
 //}
 //
-//class CubeViewModel {
-//
-//    var cubePatron: [Cube] = []
-//    let testPatron = ["0", "1", "1", "0", "1", "1", "1", "0", "1"]
-//
-//
-//    init() {
-//        initCube()
-//
+//struct CubeData: Decodable, Hashable {
+//    let render: String
+//    let solution: String
+//    
+//    enum CodingKeys: String, CodingKey {
+//        case render = "cubeRender"
+//        case solution
 //    }
-//
-//    func initCube() {
-//
-//        var counter = 0
-//        var cubeRowOne = [String]()
-//        var cubeRowTwo = [String]()
-//        var cubeRowThree = [String]()
-//
-//        for patron in testPatron {
-//
-//            if counter <= 2 {
-//                //print("primera linea \(patron)")
-//                cubeRowOne.append(patron)
+//}
 //
 //
-//            } else if counter >= 3 && counter <= 5 {
-//                //print("segunda linea \(patron)")
-//                cubeRowTwo.append(patron)
 //
 //
-//            } else if (counter > 5) {
-//                //print("tercera linea \(patron)")
-//                cubeRowThree.append(patron)
-//
-//            }
-//
-//            counter += 1
 //
 //
+//
+//func loadJson() -> [CubeData]? {
+//    let fileName = "cubeAlgorithms"
+//    if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+//        do {
+//            let data = try Data(contentsOf: url)
+//            let decoder = JSONDecoder()
+//            let jsonData = try decoder.decode(ResponseData.self, from: data)
+//            return jsonData.oll
+//            
+//        } catch {
+//            print("\(error)")
 //        }
-//
-//        cubePatron = [Cube(rowOne: cubeRowOne, rowTwo: cubeRowTwo, rowThree: cubeRowThree, rowTop: cubeRowOne, rowRight: cubeRowTwo, rowLeft: cubeRowThree, rowBottom: cubeRowOne)]
-//
-//        print(cubeRowOne)
-//        print(cubeRowTwo)
-//        print(cubeRowThree)
-//
 //    }
-//
+//    return nil
 //}
 //
-//let a = CubeViewModel()
 //
+//
+
+//func transformData(data: String) -> Void {
+//
+//    var array: [String] = []
+//    //print(data)
+//
+//    for index in data {
+//        //print(index)
+//        array.append("\(index)")
+//    }
+//    
+//    print(array)
+//}
+//
+//
+//transformData(data: "010111010101000000101")
