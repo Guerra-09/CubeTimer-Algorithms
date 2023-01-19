@@ -4,6 +4,7 @@
 //
 //  Created by José Guerra on 15-01-23.
 //
+// basico methods: https://www.myrubik.com/elcub3x3x3.php?lang=es
 
 import SwiftUI
 
