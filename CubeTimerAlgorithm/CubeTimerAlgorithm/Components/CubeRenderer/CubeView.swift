@@ -33,6 +33,7 @@ struct CubeView: View {
                     
                     CornerComponent(side: 2, isYellow: readCorners(pieceNumber: 2), firstCorner: readUpPiece(pieceNumber: 3), secondCorner: readUpPiece(pieceNumber: 5))
                 }
+     
                 
                 GridRow {
                     EdgeComponent(side: 4, isYellow: readEdges(pieceNumber: 2), upEdge: readUpPiece(pieceNumber: 6))
@@ -211,6 +212,7 @@ struct CubeView: View {
 
 struct CubeView_Previews: PreviewProvider {
     static var previews: some View {
-        CubeView(patron: ["1"], solution: "nil")
+        CubeView(patron: ["1", "1", "0", "1", "1", "1", "0", "1", "1", "0", "0", "1", "0", "0", "0", "0", "1", "0", "0", "0", "0"], solution: "DA")
+        // 110111011001000010000
     }
 }

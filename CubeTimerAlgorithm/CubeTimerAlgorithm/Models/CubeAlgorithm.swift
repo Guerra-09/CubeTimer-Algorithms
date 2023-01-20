@@ -7,14 +7,6 @@
 
 import Foundation
 
-struct Cube: Identifiable {
-    
-    let id = UUID().uuidString
-    let rowOne: [String]
-    let rowTwo: [String]
-    let rowThree: [String]
-
-}
 
 struct ResponseData: Decodable {
     let oll: [CubeData]

@@ -29,6 +29,7 @@ class OllViewModel: ObservableObject {
                 print("\(error)")
             }
         }
+    
         return [CubeData(id: 1, render: "nil", solution: "nil")]
     }
     
@@ -43,7 +44,7 @@ class OllViewModel: ObservableObject {
             array.append("\(index)")
         }
         
-        print(array)
+        
         return array
     }
     
