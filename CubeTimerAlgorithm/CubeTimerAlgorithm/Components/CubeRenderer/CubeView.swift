@@ -59,20 +59,13 @@ struct CubeView: View {
                 .multilineTextAlignment(.center)
                 .bold()
             
-            
-            .onAppear {
-                renderize()
-            }
 
 
         }
         
      }
     
-    func renderize() -> Void {
-        
-    }
-    
+
     //   9   10   11    12   13  14   15   16   17    18  19   20
     // ["1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0"]
     func readUpPiece(pieceNumber number: Int) -> Bool {

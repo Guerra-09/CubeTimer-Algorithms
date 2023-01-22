@@ -33,6 +33,6 @@ struct StarComponent: View {
 
 struct StarComponent_Previews: PreviewProvider {
     static var previews: some View {
-        StarComponent(isSaved: false)
+        StarComponent(isSaved: true)
     }
 }
