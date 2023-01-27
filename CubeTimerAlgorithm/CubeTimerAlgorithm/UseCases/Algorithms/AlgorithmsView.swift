@@ -13,11 +13,11 @@ struct AlgorithmsView: View {
         VStack {
             
             HStack {
-                NavigationLink(destination: OLLAlgorithms()) {
+                NavigationLink(destination: OllView()) {
                     AlgorithmButton(cubeImage: "oll_presentation", square: true, title: "OLL")
                 }
                 
-                NavigationLink(destination: Text("in progress")) {
+                NavigationLink(destination: PllView()) {
                     AlgorithmButton(cubeImage: "pll_presentation", square: true, title: "PLL")
                 }
             }
@@ -31,6 +31,7 @@ struct AlgorithmsView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("backgroundColor"))
+        .navigationTitle("Categories")
         
     }
 }

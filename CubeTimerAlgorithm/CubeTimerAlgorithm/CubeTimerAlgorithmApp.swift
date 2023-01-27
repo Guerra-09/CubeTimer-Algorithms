@@ -14,6 +14,8 @@ struct CubeTimerAlgorithmApp: App {
         WindowGroup {
             NavigationView {
                 MenuView()
+                //OllView()
+                
             }
         }
     }
