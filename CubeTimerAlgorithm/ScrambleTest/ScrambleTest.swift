@@ -21,6 +21,7 @@ final class ScrambleTest: XCTestCase {
         
         for move in actual {
             print(move)
+            
 
             XCTAssertTrue(expected)
         }
